@@ -1,11 +1,13 @@
-#include "Library.h"
+#include "Header/Library.h"
+#include "Header/Book.h"
+#include "Header/Novel.h"
+#include "Header/TextBook.h"
+#include "Header/Factory.h"
 
 int main() {
-    map<string, vector<Book*>> localStorage;
-    ifstream readStream("storage.txt");
-    stringstream ss;
-    string line;
-    BookFactory* factory = nullptr;  // Initialize factory pointer to null to avoid using uninitialized pointer
-
+    ifstream readStream("DATA/storage.txt");
+    string s;
+    getline(readStream, s);
+    cout << s;
     return 0;
 }
