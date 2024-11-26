@@ -1,15 +1,15 @@
-textbook, Physics for Scientists and Engineers, Raymond A. Serway, 2013, Physics
-novel, Pride and Prejudice, Jane Austen, 1813, Romance
-novel, Moby Dick, Herman Melville, 1851, Adventure
-novel, To Kill a Mockingbird, Harper Lee, 1960, Drama
-novel, 1984, George Orwell, 1949, Dystopian
-novel, The Great Gatsby, F. Scott Fitzgerald, 1925, Tragedy
-novel, War and Peace, Leo Tolstoy, 1869, Historical Fiction
-novel, The Catcher in the Rye, J.D. Salinger, 1951, Coming-of-Age
-novel, The Hobbit, J.R.R. Tolkien, 1937, Fantasy
-novel, Crime and Punishment, Fyodor Dostoevsky, 1866, Psychological Fiction
-novel, Jane Eyre, Charlotte Bronte, 1847, Gothic Romance
-textbook, Introduction to Algorithms, Thomas H. Cormen, 2009, Computer Science
-textbook, Advanced Calculus, Patrick M. Fitzpatrick, 2016, Mathematics
-textbook, Linear Algebra, David C. Lay, 2015, Mathematics
-textbook, The Art of Computer Programming, Donald E. Knuth, 1997, Computer Science
+textbook, Physics for Scientists and Engineers, Raymond A. Serway, 2013, Physics, available
+novel, Pride and Prejudice, Jane Austen, 1813, Romance, available
+novel, Moby Dick, Herman Melville, 1851, Adventure, available
+novel, To Kill a Mockingbird, Harper Lee, 1960, Drama, available
+novel, 1984, George Orwell, 1949, Dystopian, available
+novel, The Great Gatsby, F. Scott Fitzgerald, 1925, Tragedy, available
+novel, War and Peace, Leo Tolstoy, 1869, Historical Fiction, available
+novel, The Catcher in the Rye, J.D. Salinger, 1951, Coming-of-Age, available
+novel, The Hobbit, J.R.R. Tolkien, 1937, Fantasy, available
+novel, Crime and Punishment, Fyodor Dostoevsky, 1866, Psychological Fiction, available
+novel, Jane Eyre, Charlotte Bronte, 1847, Gothic Romance, available
+textbook, Introduction to Algorithms, Thomas H. Cormen, 2009, Computer Science, available
+textbook, Advanced Calculus, Patrick M. Fitzpatrick, 2016, Mathematics, available
+textbook, Linear Algebra, David C. Lay, 2015, Mathematics, available
+textbook, The Art of Computer Programming, Donald E. Knuth, 1997, Computer Science, available

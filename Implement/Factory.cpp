@@ -1,7 +1,7 @@
 #include "../Header/Factory.h"
 
 Book* NovelFactory::CreateBook(string line) {
-    string type, name, author, genre;
+    string type, name, author, genre, state;
     int year;
 
     stringstream ss(line);
@@ -11,6 +11,7 @@ Book* NovelFactory::CreateBook(string line) {
     ss >> year;
     ss.ignore(1); // Ignore comma after year
     getline(ss, genre, ',');
+    getline(ss, state, ',');
 
     // Trim spaces
     auto trim = [](std::string& str) {
@@ -22,12 +23,18 @@ Book* NovelFactory::CreateBook(string line) {
     trim(name);
     trim(author);
     trim(genre);
+    trim(state);
 
-    return new Novel(name, author, year, genre);
+    BookState* st;
+
+    if (state == "available") st = new AvailableState;
+    else st = new BorrowedState;
+
+    return new Novel(name, author, year, st, genre);
 }
 
 Book* TextBookFactory::CreateBook(string line) {
-    string type, name, author, subject;
+    string type, name, author, subject, state;
     int year;
 
     stringstream ss(line);
@@ -37,6 +44,7 @@ Book* TextBookFactory::CreateBook(string line) {
     ss >> year;
     ss.ignore(1); // Ignore comma after year
     getline(ss, subject, ',');
+    getline(ss, state, ',');
 
     // Trim spaces
     auto trim = [](std::string& str) {
@@ -48,6 +56,12 @@ Book* TextBookFactory::CreateBook(string line) {
     trim(name);
     trim(author);
     trim(subject);
+    trim(state);
 
-    return new TextBook(name, author, year, subject);
+    BookState* st;
+
+    if (state == "available") st = new AvailableState;
+    else st = new BorrowedState;
+
+    return new TextBook(name, author, year, st, subject);
 }

@@ -1,9 +1,17 @@
 #pragma once
 
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <map>
+#include "StandardLibrary.h"
+#include "Book.h"
 
-using namespace std;
+class Library {
+private:
+    vector<Book*> Books;
+public:
+    Library();
+    ~Library();
+
+    void AddBook(Book*);
+    vector<Book*> SearchByTitle(string);
+    vector<Book*> SearchByAuthor(string);
+    // vector<Book*> SearchByType(string);
+};
