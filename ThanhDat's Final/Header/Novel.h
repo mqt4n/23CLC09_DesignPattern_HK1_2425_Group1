@@ -8,8 +8,10 @@ private:
     string genre;
 public:
     Novel();
-    Novel(string, string, int, string);
+    Novel(string, string, int, string, bool);
     Novel(const Novel&);
-    ~Novel() {}
-    void DisplayInfor();
+    ~Novel();
+
+    string getType();
+    void displayInfo();
 };

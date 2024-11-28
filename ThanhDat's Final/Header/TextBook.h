@@ -8,8 +8,10 @@ private:
     string subject;
 public:
     TextBook();
-    TextBook(string, string, int, BookState*, string);
+    TextBook(string, string, int, string, bool);
     TextBook(const TextBook&);
-    ~TextBook() {}
-    void DisplayInfor();
+    ~TextBook();
+
+    string getType();
+    void displayInfo();
 };

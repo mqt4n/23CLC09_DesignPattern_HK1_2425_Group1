@@ -1,6 +1,8 @@
 #include "../Header/Factory.h"
 
-Book* NovelFactory::CreateBook(string line) {
+Book* NovelFactory::createBook() {return new Novel();}
+
+Book* NovelFactory::createBook(string line) {
     string type, name, author, genre, state;
     int year;
 
@@ -25,15 +27,14 @@ Book* NovelFactory::CreateBook(string line) {
     trim(genre);
     trim(state);
 
-    BookState* st;
+    bool borrowed = (state == "available") ? false : true;
 
-    if (state == "available") st = new AvailableState;
-    else st = new BorrowedState;
-
-    return new Novel(name, author, year, st, genre);
+    return new Novel(name, author, year, genre, borrowed);
 }
 
-Book* TextBookFactory::CreateBook(string line) {
+Book* TextBookFactory::createBook() {return new TextBook();}
+
+Book* TextBookFactory::createBook(string line) {
     string type, name, author, subject, state;
     int year;
 
@@ -58,10 +59,33 @@ Book* TextBookFactory::CreateBook(string line) {
     trim(subject);
     trim(state);
 
-    BookState* st;
+    bool borrowed = (state == "available") ? false : true;
 
-    if (state == "available") st = new AvailableState;
-    else st = new BorrowedState;
+    return new TextBook(name, author, year, subject, borrowed);
+}
 
-    return new TextBook(name, author, year, st, subject);
+Human* MemberFactory::createHuman(string line) {
+    // Format: type,fullname,day,month,year
+    string type, fullname;
+    int day, month, year;
+
+    stringstream ss(line);
+    getline(ss, type, ',');
+    getline(ss, fullname, ',');
+    ss >> day;
+    ss.ignore(1); // Ignore comma after day
+    ss >> month;
+    ss.ignore(1); // Ignore comma after month
+    ss >> year;
+
+    // Trim spaces
+    auto trim = [](std::string& str) {
+        str.erase(0, str.find_first_not_of(" \t"));
+        str.erase(str.find_last_not_of(" \t") + 1);
+    };
+
+    trim(type);
+    trim(fullname);
+
+    return new Member(fullname, day, month, year);
 }
