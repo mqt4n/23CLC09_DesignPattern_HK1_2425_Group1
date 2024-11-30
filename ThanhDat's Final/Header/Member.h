@@ -16,6 +16,7 @@ public:
     ~Member();
 
     static void setStaticID(int);
+    static int getStaticID();
     int getID();
     void displayInfo();
     void borrowBook(Book*);

@@ -12,6 +12,7 @@ Human(member.fullname, member.day, member.month, member.year), ID(member.ID) {}
 Member::~Member() {}
 
 void Member::setStaticID(int ID) {staticID = ID;}
+int Member::getStaticID() {return staticID;}
 int Member::getID() {return ID;}
 void Member::displayInfo() {
     cout << "ID: " << ID << endl;

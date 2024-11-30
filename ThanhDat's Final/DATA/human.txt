@@ -8,4 +8,5 @@ David Miller,18/6/1980,7
 Elizabeth Taylor,5/4/1992,8
 Robert Anderson,29/9/1986,9
 Jessica Thomas,17/1/1994,10
-Nguyen Van A,1/1/2000,16
+Nguyen Van A,1/1/2005,16
+Nguyen Van B,2/2/2002,17

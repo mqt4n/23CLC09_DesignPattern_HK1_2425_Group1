@@ -112,6 +112,10 @@ LibraryFacade::~LibraryFacade() {
         delete member;
     }
     file.close();
+
+    file.open("DATA/lastID.txt");
+    file << Member::getStaticID();
+    file.close();
 }
 
 void LibraryFacade::search() {
