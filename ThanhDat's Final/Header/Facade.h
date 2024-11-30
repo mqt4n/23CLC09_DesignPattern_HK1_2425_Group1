@@ -1,6 +1,8 @@
-#pragma ocne
+#pragma once
 
 #include "StandardLibrary.h"
+#include "../Header/Human.h"
+#include "../Header/Member.h"
 #include "Book.h"
 #include "Strategy.h"
 #include "Factory.h"
@@ -18,5 +20,6 @@ public:
     void displayAllMembers();
     void addBook();
     void addMember();
+    void returnBook();
     bool borrowBook();
 };

@@ -9,6 +9,7 @@ private:
 public:
     TextBook();
     TextBook(string, string, int, string, bool);
+    TextBook(string, string, int, string, bool, int);
     TextBook(const TextBook&);
     ~TextBook();
 

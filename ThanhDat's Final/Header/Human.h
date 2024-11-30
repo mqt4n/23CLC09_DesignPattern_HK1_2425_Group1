@@ -14,6 +14,7 @@ public:
     ~Human();
 
     string getFullname();
+    string getDateOfBirth();
     int getDay();
     int getMonth();
     int getYear();

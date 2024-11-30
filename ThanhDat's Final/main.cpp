@@ -8,7 +8,7 @@
 #include "Header/Human.h"
 #include "Header/Member.h"
 
-int main() {
+void runProgram() {
     LibraryFacade library;
     int option = 0;
     while(option != 1) {
@@ -20,6 +20,7 @@ int main() {
         cout << "5. Add member" << endl;
         cout << "6. Display all members" << endl;
         cout << "7. Borrow book" << endl;
+        cout << "8. Return book" << endl;
         cout << "Choose an option: ";
         cin >> option;
         cout << "========================\n";
@@ -39,11 +40,16 @@ int main() {
             else
                 cout << "Borrowed failed" << endl;
         }
+        else if (option == 8)
+            library.returnBook();
         else if (option == 1)
             cout << "End!" << endl;
         else
             cout << "Invalid option" << endl;
-        
-    }   
+    }
+}
+
+int main() {
+    runProgram();
     return 0;
 }

@@ -4,7 +4,7 @@ Book* NovelFactory::createBook() {return new Novel();}
 
 Book* NovelFactory::createBook(string line) {
     string type, name, author, genre, state;
-    int year;
+    int year, id;
 
     stringstream ss(line);
     getline(ss, type, ',');
@@ -28,6 +28,10 @@ Book* NovelFactory::createBook(string line) {
     trim(state);
 
     bool borrowed = (state == "available") ? false : true;
+    if (borrowed) {
+        ss >> id;
+        return new Novel(name, author, year, genre, borrowed, id);
+    }
 
     return new Novel(name, author, year, genre, borrowed);
 }
@@ -60,6 +64,12 @@ Book* TextBookFactory::createBook(string line) {
     trim(state);
 
     bool borrowed = (state == "available") ? false : true;
+
+    if (borrowed) {
+        int id;
+        ss >> id;
+        return new TextBook(name, author, year, subject, borrowed, id);
+    }
 
     return new TextBook(name, author, year, subject, borrowed);
 }

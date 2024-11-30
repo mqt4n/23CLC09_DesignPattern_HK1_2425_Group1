@@ -3,6 +3,8 @@
 TextBook::TextBook() : Book(), subject("") {}
 TextBook::TextBook(string title, string author, int year, string subject, bool borrowed) :
 Book(title, author, year, borrowed), subject(subject) {}
+TextBook::TextBook(string title, string author, int year, string subject, bool borrowed, int idBorrower) :
+Book(title, author, year, borrowed, idBorrower), subject(subject) {}
 TextBook::TextBook(const TextBook& textBook) :
 Book(textBook.title, textBook.author, textBook.year, textBook.isBorrowed), subject(textBook.subject) {}
 TextBook::~TextBook() {}

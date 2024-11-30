@@ -11,10 +11,13 @@ private:
 public:
     Member();
     Member(string, int, int, int);
+    Member(string, int, int, int, int);
     Member(const Member&);
     ~Member();
 
+    static void setStaticID(int);
     int getID();
     void displayInfo();
     void borrowBook(Book*);
+    void returnBook(Book*);
 };

@@ -9,6 +9,7 @@ private:
 public:
     Novel();
     Novel(string, string, int, string, bool);
+    Novel(string, string, int, string, bool, int);
     Novel(const Novel&);
     ~Novel();
 
